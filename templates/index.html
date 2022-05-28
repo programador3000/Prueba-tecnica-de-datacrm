@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostrar(id)
+        {
+            var objeto=document.getElementById(id)
+                objeto.style.display="block";
+        }
+    </script>
+    <style>
+        .oculto {display:none;}
+    </style>
+</head>
+<body>
+    
+    <div class="oculto" id="contenido1">
+        <table border="1" >
+            <tr align="center"> 
+                <td colspan="4">
+                    <div align="center">Datos de contactos</div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Id</td>
+                <td align="center">contact_no</td>
+                <td align="center">lastname</td>
+                <td align="center">createdtime</td>
+            </tr>
+            <tr >
+                <td>{{informacion[0]['id']}}</td>
+                <td>{{informacion[0]['contact_no']}}</td>
+                <td>{{informacion[0]['lastname']}}</td>
+                <td>{{informacion[0]['createdtime']}}</td>
+            </tr>
+            <tr>
+                <td>{{informacion[1]['id']}}</td>
+                <td>{{informacion[1]['contact_no']}}</td>
+                <td>{{informacion[1]['lastname']}}</td>
+                <td>{{informacion[1]['createdtime']}}</td>
+            </tr>
+
+        </table>
+    </div>
+     <input type="button" onclick="mostrar('contenido1')" value="Ver informacion">
+    <!-- # “id, contact_no, lastname, createdtime” -->
+</body>
+</html>
